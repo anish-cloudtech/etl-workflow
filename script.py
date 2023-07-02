@@ -14,8 +14,8 @@ job.init(args["JOB_NAME"], args)
 
 
 source_node = glueContext.create_dynamic_frame.from_catalog(
-    database="<database-name>",
-    table_name="<table-name>"
+    database="<etl-glue-database-name>",
+    table_name="<etl-glue-table-name>"
 )
 
 
@@ -23,7 +23,7 @@ destination_node = glueContext.write_dynamic_frame.from_options(
     frame=source_node,
     connection_type="s3",
     format="json",
-    connection_options={"path": "s3://<destination-bucket-name>/transformed_data.json", "partitionKeys": []}
+    connection_options={"path": "s3://<etl-destination-bucket-name>/transformed_data.json", "partitionKeys": []}
 )
 
 job.commit()
