@@ -5,27 +5,27 @@ Parameters:
 
   SourceBucket:
     Type: String 
-    Default: "etl-source-1111"
+    Default: "<etl-source-bucket-name>"
 
   DestinationBucket:
     Type: String 
-    Default: "etl-destination-1111"
+    Default: "<etl-destination-bucket-name>"
 
   ScriptBucket:
     Type: String 
-    Default: "etl-script-1111"
+    Default: "<etl-script-bucket-name>"
 
   GlueCrawlerName:
     Type: String
-    Default: "etl-glue-crawler"
+    Default: "<etl-glue-crawler-name>"
 
   GlueDatabaseName:
     Type: String 
-    Default: "etl-glue-database"
+    Default: "<etl-glue-database-name>"
 
   SNSTopicEmail:
     Type: String 
-    Default: "anisimhkumar@gmail.com"
+    Default: "<notification-email>"
 
 
 Resources:
